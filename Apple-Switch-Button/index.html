@@ -46,7 +46,18 @@
             opacity: 0;
             z-index: 6;
         }
+        /* element ~ element selector
+        E~F{ sRules } 选择E元素后面的所有兄弟元素F。
+        p~ul 选择前面有 <p> 元素的每个 <ul> 元素。 
         
+        为所有相同的父元素中位于 p 元素之后的所有 ul 元素设置背景：
+        
+        p~ul{ background:#ff0000;}
+        
+        element1~element2 选择器 element1 之后出现的所有 element2。
+        两种元素必须拥有相同的父元素，但是 element2 不必直接紧随 element1。
+        
+        */
         .check:checked ~ .track {
             box-shadow: inset 0 0 0 20px #4bd863;
         }
